@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="JonnyB"
+        android:text="@string/jonnyb"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -39,7 +39,7 @@
         android:id="@+id/userEmailNavHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="jonny@devslopes.com"
+        android:text="@string/jonny_devslopes_com"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="@+id/userNameNavHeader"
         app:layout_constraintTop_toBottomOf="@+id/userNameNavHeader"
@@ -73,5 +73,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/addchannelbutton" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
