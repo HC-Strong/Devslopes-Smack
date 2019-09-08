@@ -1,6 +1,8 @@
 package com.example.smack
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
@@ -48,14 +50,19 @@ class MainActivity : AppCompatActivity() {
 
 
     fun loginBtnNavClicked(view: View) {
-
+        Log.d("view", "view tag is ${view.tag}") // don't actually care and never set it
+        //but this makes the warnings about not using 'view' stop
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
 
     fun addChannelClicked(view: View){
-
+        Log.d("view", "view tag is ${view.tag}") // don't actually care and never set it
+        //but this makes the warnings about not using 'view' stop
     }
 
     fun sendMessageBtnClicked(view: View){
-
+        Log.d("view", "view tag is ${view.tag}") // don't actually care and never set it
+        //but this makes the warnings about not using 'view' stop
     }
 }
