@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.example.smack.R
+import com.example.smack.services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -63,5 +64,8 @@ class CreateUserActivity : AppCompatActivity() {
     fun createUserClicked(view: View) {
         Log.d("view", "view tag is ${view.tag}") // don't actually care and never set it
         //but this makes the warnings about not using 'view' stop
+        AuthService.registerUser(this,"hcs@me.com", "123456"){}
+        // those curly braces at the end are the lambda function and you could actually add something in there like {complete ->
+        //   if (complete) { [put code here])    but that's not required
     }
 }
